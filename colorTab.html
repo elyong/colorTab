@@ -1,0 +1,22 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="./colorTab.css">  
+  </head>
+<body>
+  <div id="app">
+    <div class="tab">
+      <ul>
+          <li :style="{
+              backgroundColor:activeColor===nowColor?activeColor:'grey'
+            }" v-for="nowColor in colorList" @click="changeColor(nowColor)">
+            <a href="#">{{nowColor}}</a>
+          </li>
+      </ul>
+    </div>
+    <div class="content" :style="{backgroundColor:activeColor}" >
+    </div>
+  </div>
+  <script src="https://unpkg.com/vue"></script>
+  <script type="text/javascript" src="./colorTab.js"></script>
+<body>
